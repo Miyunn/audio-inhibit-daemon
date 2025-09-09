@@ -1,0 +1,17 @@
+[Unit]
+Description=Audio Inhibit Daemon
+After=graphical.target sound.target
+Wants=sound.target
+
+[Service]
+Type=simple
+ExecStart=%h/.local/bin/audio-inhibit-daemon
+Restart=on-failure
+RestartSec=3
+KillMode=control-group
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=audio-inhibit-daemon
+
+[Install]
+WantedBy=default.target
