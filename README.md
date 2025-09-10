@@ -1,4 +1,4 @@
-## Audio Inhibit Daemon (systemd)
+# Audio Inhibit Daemon (systemd)
 
 Minimal Rust daemon that **prevents system sleep while audio is playing**.
 
